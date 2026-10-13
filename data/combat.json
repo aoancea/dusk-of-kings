@@ -1,0 +1,17 @@
+{
+  "_notes": "Damage dealt = max(1, (damage + upgrades) * multiplier[attack_type][armor_type] - (armor + upgrades)).",
+  "multipliers": {
+    "normal": {"light": 1.0, "heavy": 1.0, "fortified": 0.7},
+    "pierce": {"light": 1.25, "heavy": 0.8, "fortified": 0.4},
+    "siege":  {"light": 0.75, "heavy": 1.0, "fortified": 2.0},
+    "magic":  {"light": 1.25, "heavy": 1.5, "fortified": 0.5}
+  },
+  "day_night": {
+    "alliance_day_damage": 0.12,
+    "host_night_damage": 0.15,
+    "alliance_night_sight": 0.75
+  },
+  "melee_reach": 1.0,
+  "corpse_time": 4.0,
+  "building_regen": 0.0
+}

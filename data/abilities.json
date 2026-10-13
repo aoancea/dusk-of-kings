@@ -1,0 +1,22 @@
+{
+  "heal": {
+    "name": "Heal", "hotkey": "q", "mana": 25, "cooldown": 1.5, "range": 10, "target": "ally_unit", "autocast": true,
+    "amount": 55, "icon": {"glyph": "drop", "bg": [0.15, 0.5, 0.25]},
+    "description": "Heals a wounded friendly unit for 55. Cast automatically."
+  },
+  "slow": {
+    "name": "Slow", "hotkey": "w", "mana": 40, "cooldown": 6, "range": 12, "target": "enemy_unit",
+    "duration": 10, "slow": 0.5, "icon": {"glyph": "chain", "bg": [0.25, 0.35, 0.6]},
+    "description": "Halves an enemy unit's speed and attack speed for 10 seconds."
+  },
+  "fireball": {
+    "name": "Fireball", "hotkey": "q", "mana": 100, "cooldown": 8, "range": 14, "target": "point",
+    "damage": 35, "damage_type": "normal", "radius": 3.5, "icon": {"glyph": "flame", "bg": [0.65, 0.25, 0.05]},
+    "description": "Hurls a fireball that explodes for 35 damage in an area."
+  },
+  "dark_frenzy": {
+    "name": "Dark Frenzy", "hotkey": "w", "mana": 60, "cooldown": 20, "range": 0, "target": "self",
+    "duration": 10, "haste": 0.35, "radius": 7, "icon": {"glyph": "roar", "bg": [0.45, 0.08, 0.1]},
+    "description": "Drives nearby allies into a frenzy: +35% attack speed for 10 seconds."
+  }
+}

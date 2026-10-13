@@ -1,0 +1,26 @@
+{
+  "alliance": {
+    "name": "Valemark Alliance",
+    "short": "Alliance",
+    "description": "The human kingdoms of the vale and the forest folk. Durable, expensive units, strong towers. Fight better by day.",
+    "town_hall": "keep",
+    "worker": "peasant",
+    "supply_building": "house",
+    "timber_dropoff": "lumber_mill",
+    "build_menu": ["keep", "house", "barracks", "lumber_mill", "blacksmith", "sanctum", "guard_tower", "stables", "siegeworks", "aerie"],
+    "builders_stay": true,
+    "colors": {"banner": [0.85, 0.8, 0.6], "stone": [0.72, 0.7, 0.66], "roof": [0.32, 0.38, 0.55], "wood": [0.5, 0.35, 0.2]}
+  },
+  "host": {
+    "name": "Umbral Host",
+    "short": "Host",
+    "description": "The Pale Tyrant's legions. Cheap, fast units that overwhelm their foes. Stronger at night.",
+    "town_hall": "pit",
+    "worker": "thrall",
+    "supply_building": "warren",
+    "timber_dropoff": "sawpit",
+    "build_menu": ["pit", "warren", "war_camp", "sawpit", "bone_forge", "kennels", "ritual_pyre", "watch_spire", "ogre_den", "siege_pit", "drake_roost"],
+    "builders_stay": false,
+    "colors": {"banner": [0.3, 0.05, 0.05], "stone": [0.3, 0.28, 0.29], "roof": [0.2, 0.15, 0.13], "wood": [0.28, 0.2, 0.15]}
+  }
+}

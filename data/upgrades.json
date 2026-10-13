@@ -1,0 +1,60 @@
+{
+  "_notes": "effects: damage/armor add to the stat of affected units; 'roles' or 'attack_type' filter who benefits.",
+  "fletching": {
+    "name": "Fletching", "faction": "alliance", "hotkey": "q", "cost": {"gold": 100, "timber": 100}, "time": 45,
+    "description": "+2 damage for Longbowmen, Forest Wardens and Guard Towers.",
+    "effects": {"damage": 2}, "attack_type": "pierce"
+  },
+  "alliance_weapons_1": {
+    "name": "Forged Blades I", "faction": "alliance", "hotkey": "q", "cost": {"gold": 100, "timber": 50}, "time": 45,
+    "description": "+1 damage for all Alliance combat units.", "effects": {"damage": 1}, "roles": ["melee", "ranged", "cavalry", "caster", "air", "siege"]
+  },
+  "alliance_weapons_2": {
+    "name": "Forged Blades II", "faction": "alliance", "hotkey": "q", "cost": {"gold": 175, "timber": 100}, "time": 60,
+    "requires_upgrade": "alliance_weapons_1", "tier": 2,
+    "description": "Another +1 damage for all Alliance combat units. Requires a Castle.", "effects": {"damage": 1},
+    "roles": ["melee", "ranged", "cavalry", "caster", "air", "siege"]
+  },
+  "alliance_armor_1": {
+    "name": "Tempered Plate I", "faction": "alliance", "hotkey": "w", "cost": {"gold": 100, "timber": 50}, "time": 45,
+    "description": "+1 armour for all Alliance combat units.", "effects": {"armor": 1}, "roles": ["melee", "ranged", "cavalry", "caster", "air", "siege"]
+  },
+  "alliance_armor_2": {
+    "name": "Tempered Plate II", "faction": "alliance", "hotkey": "w", "cost": {"gold": 175, "timber": 100}, "time": 60,
+    "requires_upgrade": "alliance_armor_1", "tier": 2,
+    "description": "Another +1 armour for all Alliance combat units. Requires a Castle.", "effects": {"armor": 1},
+    "roles": ["melee", "ranged", "cavalry", "caster", "air", "siege"]
+  },
+  "barbed_arrows": {
+    "name": "Barbed Arrows", "faction": "host", "hotkey": "q", "cost": {"gold": 100, "timber": 100}, "time": 45,
+    "description": "+2 damage for Shade Archers and Watch Spires.", "effects": {"damage": 2}, "attack_type": "pierce"
+  },
+  "host_weapons_1": {
+    "name": "Jagged Iron I", "faction": "host", "hotkey": "q", "cost": {"gold": 100, "timber": 50}, "time": 45,
+    "description": "+1 damage for all Host combat units.", "effects": {"damage": 1}, "roles": ["melee", "ranged", "cavalry", "caster", "air", "siege"]
+  },
+  "host_weapons_2": {
+    "name": "Jagged Iron II", "faction": "host", "hotkey": "q", "cost": {"gold": 175, "timber": 100}, "time": 60,
+    "requires_upgrade": "host_weapons_1", "tier": 2,
+    "description": "Another +1 damage for all Host combat units. Requires a Stronghold.", "effects": {"damage": 1},
+    "roles": ["melee", "ranged", "cavalry", "caster", "air", "siege"]
+  },
+  "host_armor_1": {
+    "name": "Bone Plating I", "faction": "host", "hotkey": "w", "cost": {"gold": 100, "timber": 50}, "time": 45,
+    "description": "+1 armour for all Host combat units.", "effects": {"armor": 1}, "roles": ["melee", "ranged", "cavalry", "caster", "air", "siege"]
+  },
+  "host_armor_2": {
+    "name": "Bone Plating II", "faction": "host", "hotkey": "w", "cost": {"gold": 175, "timber": 100}, "time": 60,
+    "requires_upgrade": "host_armor_1", "tier": 2,
+    "description": "Another +1 armour for all Host combat units. Requires a Stronghold.", "effects": {"armor": 1},
+    "roles": ["melee", "ranged", "cavalry", "caster", "air", "siege"]
+  },
+  "castle_upgrade": {
+    "name": "Upgrade to Castle", "faction": "alliance", "hotkey": "w", "cost": {"gold": 200, "timber": 150}, "time": 60,
+    "description": "Turns the Keep into a Castle and unlocks tier 2.", "town_hall_upgrade": "castle"
+  },
+  "stronghold_upgrade": {
+    "name": "Upgrade to Stronghold", "faction": "host", "hotkey": "w", "cost": {"gold": 200, "timber": 150}, "time": 60,
+    "description": "Turns the Pit into a Stronghold and unlocks tier 2.", "town_hall_upgrade": "stronghold"
+  }
+}

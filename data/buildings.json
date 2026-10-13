@@ -1,0 +1,133 @@
+{
+  "_notes": "footprint is in grid cells (1 cell = 2 world units). 'requires' lists building types the player must own (completed). 'tier': 2 means the Castle/Stronghold is required. dropoff = resources workers can return here.",
+
+  "keep": {
+    "name": "Keep", "faction": "alliance", "hotkey": "q", "footprint": 5, "hp": 1500, "armor": 5, "armor_type": "fortified",
+    "cost": {"gold": 350, "timber": 150}, "build_time": 60, "sight": 22, "supply": 10, "dropoff": ["gold", "timber"],
+    "trains": ["peasant"], "upgrades_to": "castle", "town_hall": true,
+    "description": "Town centre. Trains Peasants and stores gold and timber.", "model": "keep"
+  },
+  "castle": {
+    "name": "Castle", "faction": "alliance", "hotkey": "q", "footprint": 5, "hp": 2000, "armor": 6, "armor_type": "fortified",
+    "cost": {"gold": 200, "timber": 150}, "build_time": 60, "sight": 24, "supply": 10, "dropoff": ["gold", "timber"],
+    "trains": ["peasant"], "town_hall": true, "upgrade_of": "keep", "tier": 2, "buildable": false,
+    "description": "Fortified town centre. Unlocks tier 2 buildings.", "model": "castle"
+  },
+  "house": {
+    "name": "House", "faction": "alliance", "hotkey": "w", "footprint": 3, "hp": 400, "armor": 2, "armor_type": "fortified",
+    "cost": {"gold": 80, "timber": 20}, "build_time": 18, "sight": 10, "supply": 10,
+    "description": "Provides 10 supply.", "model": "house"
+  },
+  "barracks": {
+    "name": "Barracks", "faction": "alliance", "hotkey": "e", "footprint": 4, "hp": 900, "armor": 3, "armor_type": "fortified",
+    "cost": {"gold": 150, "timber": 50}, "build_time": 34, "sight": 12, "trains": ["spearman", "longbowman", "forest_warden"],
+    "description": "Trains Spearmen, Longbowmen and Forest Wardens.", "model": "barracks"
+  },
+  "lumber_mill": {
+    "name": "Lumber Mill", "faction": "alliance", "hotkey": "r", "footprint": 3, "hp": 700, "armor": 2, "armor_type": "fortified",
+    "cost": {"gold": 100, "timber": 40}, "build_time": 26, "sight": 12, "dropoff": ["timber"], "research": ["fletching"],
+    "description": "Timber drop-off. Researches Fletching. Unlocks Forest Wardens and Guard Towers.", "model": "lumber_mill"
+  },
+  "blacksmith": {
+    "name": "Blacksmith", "faction": "alliance", "hotkey": "t", "footprint": 3, "hp": 700, "armor": 2, "armor_type": "fortified",
+    "cost": {"gold": 120, "timber": 60}, "build_time": 30, "sight": 12, "requires": ["barracks"],
+    "research": ["alliance_weapons_1", "alliance_weapons_2", "alliance_armor_1", "alliance_armor_2"],
+    "description": "Researches weapon and armour upgrades.", "model": "blacksmith"
+  },
+  "sanctum": {
+    "name": "Sanctum", "faction": "alliance", "hotkey": "a", "footprint": 3, "hp": 700, "armor": 2, "armor_type": "fortified",
+    "cost": {"gold": 140, "timber": 80}, "build_time": 34, "sight": 12, "requires": ["barracks"], "trains": ["loremaster"],
+    "description": "Trains Loremasters.", "model": "sanctum"
+  },
+  "guard_tower": {
+    "name": "Guard Tower", "faction": "alliance", "hotkey": "s", "footprint": 2, "hp": 600, "armor": 3, "armor_type": "fortified",
+    "cost": {"gold": 90, "timber": 60}, "build_time": 22, "sight": 18, "requires": ["lumber_mill"],
+    "attack": {"damage": 12, "type": "pierce", "range": 14, "cooldown": 1.4, "targets": ["ground", "air"], "projectile": "arrow"},
+    "description": "Defensive tower. Shoots ground and air units.", "model": "guard_tower"
+  },
+  "stables": {
+    "name": "Stables", "faction": "alliance", "hotkey": "d", "footprint": 4, "hp": 900, "armor": 3, "armor_type": "fortified",
+    "cost": {"gold": 160, "timber": 80}, "build_time": 38, "sight": 12, "tier": 2, "requires": ["barracks"], "trains": ["knight"],
+    "description": "Trains Knights. Requires a Castle.", "model": "stables"
+  },
+  "siegeworks": {
+    "name": "Siegeworks", "faction": "alliance", "hotkey": "f", "footprint": 4, "hp": 900, "armor": 3, "armor_type": "fortified",
+    "cost": {"gold": 160, "timber": 120}, "build_time": 38, "sight": 12, "tier": 2, "requires": ["blacksmith"], "trains": ["trebuchet"],
+    "description": "Builds Trebuchets. Requires a Castle.", "model": "siegeworks"
+  },
+  "aerie": {
+    "name": "Aerie", "faction": "alliance", "hotkey": "g", "footprint": 4, "hp": 800, "armor": 3, "armor_type": "fortified",
+    "cost": {"gold": 180, "timber": 120}, "build_time": 41, "sight": 14, "tier": 2, "requires": ["lumber_mill"], "trains": ["skyhawk_rider"],
+    "description": "Trains Skyhawk Riders. Requires a Castle.", "model": "aerie"
+  },
+
+  "pit": {
+    "name": "Pit", "faction": "host", "hotkey": "q", "footprint": 5, "hp": 1500, "armor": 5, "armor_type": "fortified",
+    "cost": {"gold": 325, "timber": 150}, "build_time": 80, "sight": 22, "supply": 10, "dropoff": ["gold", "timber"],
+    "trains": ["thrall"], "upgrades_to": "stronghold", "town_hall": true,
+    "description": "Heart of a Host camp. Trains Thralls and stores gold and timber.", "model": "pit"
+  },
+  "stronghold": {
+    "name": "Stronghold", "faction": "host", "hotkey": "q", "footprint": 5, "hp": 2000, "armor": 6, "armor_type": "fortified",
+    "cost": {"gold": 200, "timber": 150}, "build_time": 60, "sight": 24, "supply": 10, "dropoff": ["gold", "timber"],
+    "trains": ["thrall"], "town_hall": true, "upgrade_of": "pit", "tier": 2, "buildable": false,
+    "description": "Dark fortress. Unlocks tier 2 buildings.", "model": "stronghold"
+  },
+  "warren": {
+    "name": "Warren", "faction": "host", "hotkey": "w", "footprint": 3, "hp": 380, "armor": 2, "armor_type": "fortified",
+    "cost": {"gold": 70, "timber": 20}, "build_time": 22, "sight": 10, "supply": 10,
+    "description": "Provides 10 supply.", "model": "warren"
+  },
+  "war_camp": {
+    "name": "War Camp", "faction": "host", "hotkey": "e", "footprint": 4, "hp": 900, "armor": 3, "armor_type": "fortified",
+    "cost": {"gold": 140, "timber": 40}, "build_time": 42, "sight": 12, "trains": ["brute", "shade_archer"],
+    "description": "Trains Brutes and Shade Archers.", "model": "war_camp"
+  },
+  "sawpit": {
+    "name": "Sawpit", "faction": "host", "hotkey": "r", "footprint": 3, "hp": 650, "armor": 2, "armor_type": "fortified",
+    "cost": {"gold": 90, "timber": 40}, "build_time": 32, "sight": 12, "dropoff": ["timber"], "research": ["barbed_arrows"],
+    "description": "Timber drop-off. Researches Barbed Arrows. Unlocks Watch Spires.", "model": "sawpit"
+  },
+  "bone_forge": {
+    "name": "Bone Forge", "faction": "host", "hotkey": "t", "footprint": 3, "hp": 700, "armor": 2, "armor_type": "fortified",
+    "cost": {"gold": 120, "timber": 60}, "build_time": 40, "sight": 12, "requires": ["war_camp"],
+    "research": ["host_weapons_1", "host_weapons_2", "host_armor_1", "host_armor_2"],
+    "description": "Researches weapon and armour upgrades.", "model": "bone_forge"
+  },
+  "kennels": {
+    "name": "Kennels", "faction": "host", "hotkey": "a", "footprint": 4, "hp": 850, "armor": 3, "armor_type": "fortified",
+    "cost": {"gold": 150, "timber": 60}, "build_time": 45, "sight": 12, "requires": ["war_camp"], "trains": ["dreadhound_rider"],
+    "description": "Trains Dreadhound Riders.", "model": "kennels"
+  },
+  "ritual_pyre": {
+    "name": "Ritual Pyre", "faction": "host", "hotkey": "s", "footprint": 3, "hp": 700, "armor": 2, "armor_type": "fortified",
+    "cost": {"gold": 130, "timber": 80}, "build_time": 45, "sight": 12, "requires": ["war_camp"], "trains": ["pyre_witch"],
+    "description": "Trains Pyre Witches.", "model": "ritual_pyre"
+  },
+  "watch_spire": {
+    "name": "Watch Spire", "faction": "host", "hotkey": "d", "footprint": 2, "hp": 560, "armor": 3, "armor_type": "fortified",
+    "cost": {"gold": 85, "timber": 60}, "build_time": 28, "sight": 18, "requires": ["sawpit"],
+    "attack": {"damage": 11, "type": "pierce", "range": 13, "cooldown": 1.3, "targets": ["ground", "air"], "projectile": "dark_arrow"},
+    "description": "Defensive spire. Shoots ground and air units.", "model": "watch_spire"
+  },
+  "ogre_den": {
+    "name": "Ogre Den", "faction": "host", "hotkey": "f", "footprint": 4, "hp": 950, "armor": 3, "armor_type": "fortified",
+    "cost": {"gold": 170, "timber": 90}, "build_time": 50, "sight": 12, "tier": 2, "requires": ["war_camp"], "trains": ["stone_ogre"],
+    "description": "Trains Stone Ogres. Requires a Stronghold.", "model": "ogre_den"
+  },
+  "siege_pit": {
+    "name": "Siege Pit", "faction": "host", "hotkey": "g", "footprint": 4, "hp": 850, "armor": 3, "armor_type": "fortified",
+    "cost": {"gold": 150, "timber": 110}, "build_time": 48, "sight": 12, "tier": 2, "requires": ["bone_forge"], "trains": ["war_catapult"],
+    "description": "Builds War Catapults. Requires a Stronghold.", "model": "siege_pit"
+  },
+  "drake_roost": {
+    "name": "Drake Roost", "faction": "host", "hotkey": "h", "footprint": 4, "hp": 850, "armor": 3, "armor_type": "fortified",
+    "cost": {"gold": 180, "timber": 120}, "build_time": 55, "sight": 14, "tier": 2, "requires": ["sawpit"], "trains": ["carrion_drake"],
+    "description": "Trains Carrion Drakes. Requires a Stronghold.", "model": "drake_roost"
+  },
+
+  "gold_mine": {
+    "name": "Gold Mine", "faction": "neutral", "footprint": 3, "hp": 99999, "armor": 99, "armor_type": "fortified", "sight": 0,
+    "description": "Workers gather gold here.", "model": "gold_mine", "buildable": false
+  }
+}

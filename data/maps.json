@@ -1,0 +1,74 @@
+{
+  "_notes": "World coordinates: x east, z north, the map spans [-size/2, size/2]. Heights are in world units (sea level 0, base ground ~1). Features are applied in order. 'starts' are town-hall centres; worker spawn and mine come from the base entry.",
+
+  "greyfen_crossing": {
+    "name": "Greyfen Crossing",
+    "description": "Two highland holds divided by the Greyfen river. Three fords cross it; the centre ford is the fastest road to war.",
+    "size": 224, "seed": 31, "palette": "fen", "start_hour": 9.0,
+    "base_height": 1.2, "roughness": 0.9,
+    "starts": [
+      {"pos": [-76, -76], "mine": [-94, -62], "grove": [[-100, -96, 14], [-66, -102, 10]]},
+      {"pos": [76, 76], "mine": [94, 62], "grove": [[100, 96, 14], [66, 102, 10]]}
+    ],
+    "features": [
+      {"type": "plateau", "pos": [-78, -78], "radius": 36, "height": 6.5, "ramps": [[-48, -52, 9], [-50, -94, 7]]},
+      {"type": "plateau", "pos": [78, 78], "radius": 36, "height": 6.5, "ramps": [[48, 52, 9], [50, 94, 7]]},
+      {"type": "river", "points": [[-112, 112], [-60, 58], [-20, 22], [20, -22], [60, -58], [112, -112]], "width": 9, "depth": 2.2,
+       "fords": [[0, 0, 9], [-66, 62, 7], [66, -62, 7]]},
+      {"type": "hill", "pos": [-20, 40], "radius": 14, "height": 3.0},
+      {"type": "hill", "pos": [20, -40], "radius": 14, "height": 3.0},
+      {"type": "mountain", "pos": [-100, 40], "radius": 16, "height": 14},
+      {"type": "mountain", "pos": [100, -40], "radius": 16, "height": 14},
+      {"type": "mountain", "pos": [38, 10], "radius": 8, "height": 10},
+      {"type": "mountain", "pos": [-38, -10], "radius": 8, "height": 10}
+    ],
+    "mines": [
+      {"pos": [-94, -62], "gold": 8000}, {"pos": [94, 62], "gold": 8000},
+      {"pos": [-30, -88], "gold": 6000}, {"pos": [30, 88], "gold": 6000},
+      {"pos": [-96, 6], "gold": 6000}, {"pos": [96, -6], "gold": 6000}
+    ],
+    "groves": [
+      [-100, -96, 14], [-66, -102, 10], [100, 96, 14], [66, 102, 10],
+      [-14, -100, 10], [14, 100, 10], [-104, 22, 9], [104, -22, 9],
+      [-40, 30, 8], [40, -30, 8], [-80, 70, 12], [80, -70, 12], [0, 40, 6], [0, -40, 6]
+    ],
+    "decor": {"rocks": 70, "reeds": 120, "ruins": [[-8, 30], [8, -30]]}
+  },
+
+  "shadowed_pass": {
+    "name": "The Shadowed Pass",
+    "description": "A mountain gorge under a dying sun. A ruined hill fort guards the only broad road; narrow trails wind around it.",
+    "size": 224, "seed": 77, "palette": "ash", "start_hour": 17.0,
+    "base_height": 1.2, "roughness": 1.2,
+    "starts": [
+      {"pos": [0, -86], "mine": [20, -100], "grove": [[-26, -104, 12], [30, -76, 8]]},
+      {"pos": [0, 86], "mine": [-20, 100], "grove": [[26, 104, 12], [-30, 76, 8]]}
+    ],
+    "features": [
+      {"type": "plateau", "pos": [0, -88], "radius": 32, "height": 7.5, "ramps": [[0, -55, 9], [-34, -78, 6]]},
+      {"type": "plateau", "pos": [0, 88], "radius": 32, "height": 7.5, "ramps": [[0, 55, 9], [34, 78, 6]]},
+      {"type": "plateau", "pos": [0, 0], "radius": 16, "height": 4.5, "ramps": [[0, -17, 7], [0, 17, 7], [-17, 0, 5], [17, 0, 5]]},
+      {"type": "mountain", "pos": [-48, 0], "radius": 26, "height": 18},
+      {"type": "mountain", "pos": [48, 0], "radius": 26, "height": 18},
+      {"type": "mountain", "pos": [-104, 0], "radius": 18, "height": 16},
+      {"type": "mountain", "pos": [104, 0], "radius": 18, "height": 16},
+      {"type": "mountain", "pos": [-60, -100], "radius": 14, "height": 15},
+      {"type": "mountain", "pos": [60, 100], "radius": 14, "height": 15},
+      {"type": "mountain", "pos": [62, -96], "radius": 12, "height": 12},
+      {"type": "mountain", "pos": [-62, 96], "radius": 12, "height": 12},
+      {"type": "pond", "pos": [-76, 40], "radius": 9, "depth": 2.0},
+      {"type": "pond", "pos": [76, -40], "radius": 9, "depth": 2.0}
+    ],
+    "mines": [
+      {"pos": [20, -100], "gold": 8000}, {"pos": [-20, 100], "gold": 8000},
+      {"pos": [-62, -58], "gold": 6000}, {"pos": [62, 58], "gold": 6000},
+      {"pos": [0, 0], "gold": 7000}
+    ],
+    "groves": [
+      [-26, -104, 12], [30, -76, 8], [26, 104, 12], [-30, 76, 8],
+      [-84, -60, 10], [84, 60, 10], [-80, 20, 8], [80, -20, 8],
+      [-24, -34, 6], [24, 34, 6]
+    ],
+    "decor": {"rocks": 110, "reeds": 30, "ruins": [[-8, -8], [8, 8], [10, -6], [-10, 6]]}
+  }
+}

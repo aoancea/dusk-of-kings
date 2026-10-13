@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+*.pyc
+/build/
+/dist/
+/cache/
+/saves/
+/screenshots/
+/settings.json
+*.spec

@@ -1,0 +1,30 @@
+{
+  "_notes": "Build orders are processed top to bottom; each step waits until it can be afforded. 'workers' steps set the target worker count. 'army' lists the unit mix the AI keeps producing once its build order is done.",
+  "difficulty": {
+    "easy":   {"think": 1.6, "apm_delay": 1.2, "gather_bonus": 0.75, "first_attack": 600, "attack_interval": 240, "attack_size": 10, "max_workers": 16, "expand_at": 900, "micro": false, "scout": false},
+    "normal": {"think": 0.9, "apm_delay": 0.6, "gather_bonus": 1.0,  "first_attack": 420, "attack_interval": 170, "attack_size": 14, "max_workers": 24, "expand_at": 540, "micro": true,  "scout": true},
+    "hard":   {"think": 0.5, "apm_delay": 0.25, "gather_bonus": 1.15, "first_attack": 330, "attack_interval": 130, "attack_size": 18, "max_workers": 32, "expand_at": 400, "micro": true,  "scout": true}
+  },
+  "build_orders": {
+    "alliance": [
+      {"workers": 8}, {"build": "house"}, {"workers": 10}, {"build": "barracks"}, {"build": "lumber_mill"},
+      {"workers": 13}, {"build": "house"}, {"train": "spearman", "count": 2}, {"build": "blacksmith"},
+      {"train": "longbowman", "count": 2}, {"build": "house"}, {"research": "fletching"}, {"build": "sanctum"},
+      {"upgrade_town_hall": true}, {"build": "house"}, {"build": "guard_tower"}, {"research": "alliance_weapons_1"},
+      {"build": "stables"}, {"build": "barracks"}, {"build": "house"}, {"research": "alliance_armor_1"},
+      {"build": "siegeworks"}, {"build": "aerie"}, {"research": "alliance_weapons_2"}, {"research": "alliance_armor_2"}
+    ],
+    "host": [
+      {"workers": 8}, {"build": "warren"}, {"workers": 10}, {"build": "war_camp"}, {"build": "sawpit"},
+      {"workers": 13}, {"build": "warren"}, {"train": "brute", "count": 3}, {"build": "bone_forge"},
+      {"train": "shade_archer", "count": 2}, {"build": "warren"}, {"build": "kennels"}, {"research": "barbed_arrows"},
+      {"build": "ritual_pyre"}, {"upgrade_town_hall": true}, {"build": "warren"}, {"research": "host_weapons_1"},
+      {"build": "ogre_den"}, {"build": "war_camp"}, {"build": "warren"}, {"research": "host_armor_1"},
+      {"build": "siege_pit"}, {"build": "drake_roost"}, {"research": "host_weapons_2"}, {"research": "host_armor_2"}
+    ]
+  },
+  "army": {
+    "alliance": {"spearman": 3, "longbowman": 4, "forest_warden": 1, "knight": 4, "loremaster": 1, "trebuchet": 1, "skyhawk_rider": 1},
+    "host": {"brute": 5, "shade_archer": 3, "dreadhound_rider": 3, "stone_ogre": 2, "pyre_witch": 1, "war_catapult": 1, "carrion_drake": 1}
+  }
+}

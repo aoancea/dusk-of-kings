@@ -1,0 +1,156 @@
+{
+  "_notes": "Stats are per unit. attack.type x armor_type multipliers live in combat.json. 'team' in a look means the player's team colour. Ranges and speeds are in world units (a spearman is about 1.8 units tall).",
+
+  "peasant": {
+    "name": "Peasant", "faction": "alliance", "role": "worker", "hotkey": "q",
+    "description": "Gathers gold and timber and constructs buildings.",
+    "cost": {"gold": 50, "timber": 0}, "supply": 1, "build_time": 12, "trained_at": "keep",
+    "hp": 55, "armor": 0, "armor_type": "light", "speed": 5.4, "sight": 14, "radius": 0.45,
+    "attack": {"damage": 4, "type": "normal", "range": 0, "cooldown": 1.5, "targets": ["ground"]},
+    "model": {"kind": "humanoid", "scale": 0.82, "look": {"race": "human", "chest_style": "tunic", "shirt": [0.55, 0.45, 0.28],
+              "pants": [0.35, 0.28, 0.2], "boots": [0.3, 0.2, 0.12], "helmet": "cap", "helmet_color": "team", "weapon": "pickaxe"}}
+  },
+  "spearman": {
+    "name": "Spearman", "faction": "alliance", "role": "melee", "hotkey": "w",
+    "description": "Sturdy front-line infantry with spear and shield.",
+    "cost": {"gold": 60, "timber": 0}, "supply": 1, "build_time": 15, "trained_at": "barracks",
+    "hp": 145, "armor": 2, "armor_type": "heavy", "speed": 5.0, "sight": 16, "radius": 0.5,
+    "attack": {"damage": 10, "type": "normal", "range": 0.4, "cooldown": 1.3, "targets": ["ground"]},
+    "model": {"kind": "humanoid", "scale": 0.86, "look": {"race": "human", "chest_style": "plate", "shirt": [0.62, 0.62, 0.66],
+              "pants": [0.3, 0.28, 0.3], "boots": [0.25, 0.2, 0.15], "helmet": "spiked", "helmet_color": [0.6, 0.6, 0.64],
+              "weapon": "spear", "offhand": "shield", "offhand_color": "team", "cape": "team"}}
+  },
+  "longbowman": {
+    "name": "Longbowman", "faction": "alliance", "role": "ranged", "hotkey": "e",
+    "description": "Ranged infantry. Can shoot flying units.",
+    "cost": {"gold": 50, "timber": 20}, "supply": 1, "build_time": 16, "trained_at": "barracks",
+    "hp": 80, "armor": 0, "armor_type": "light", "speed": 5.0, "sight": 20, "radius": 0.45,
+    "attack": {"damage": 10, "type": "pierce", "range": 12, "cooldown": 1.5, "targets": ["ground", "air"], "projectile": "arrow"},
+    "model": {"kind": "humanoid", "scale": 0.84, "look": {"race": "human", "chest_style": "tunic", "shirt": "team",
+              "pants": [0.3, 0.32, 0.22], "boots": [0.3, 0.2, 0.12], "helmet": "hood", "helmet_color": [0.3, 0.36, 0.22], "weapon": "bow"}}
+  },
+  "forest_warden": {
+    "name": "Forest Warden", "faction": "alliance", "role": "ranged", "hotkey": "r",
+    "description": "Swift forest scout with a long sight range. Requires a Lumber Mill.",
+    "cost": {"gold": 75, "timber": 25}, "supply": 2, "build_time": 20, "trained_at": "barracks", "requires": ["lumber_mill"],
+    "hp": 90, "armor": 1, "armor_type": "light", "speed": 6.6, "sight": 24, "radius": 0.45,
+    "attack": {"damage": 8, "type": "pierce", "range": 10, "cooldown": 1.0, "targets": ["ground", "air"], "projectile": "arrow"},
+    "model": {"kind": "humanoid", "scale": 0.88, "look": {"race": "elf", "chest_style": "vest", "shirt": [0.22, 0.42, 0.25],
+              "pants": [0.25, 0.3, 0.2], "boots": [0.35, 0.25, 0.15], "helmet": "hood", "helmet_color": "team", "weapon": "bow",
+              "hair_style": "long", "hair": [0.9, 0.85, 0.6]}}
+  },
+  "knight": {
+    "name": "Knight", "faction": "alliance", "role": "cavalry", "hotkey": "t",
+    "description": "Heavily armoured cavalry. Requires a Castle.",
+    "cost": {"gold": 140, "timber": 40}, "supply": 3, "build_time": 28, "trained_at": "stables",
+    "hp": 300, "armor": 3, "armor_type": "heavy", "speed": 7.2, "sight": 16, "radius": 0.9,
+    "attack": {"damage": 19, "type": "normal", "range": 0.6, "cooldown": 1.5, "targets": ["ground"]},
+    "model": {"kind": "rider", "mount": "horse", "scale": 0.95, "mount_color": [0.85, 0.85, 0.82], "barding": "team",
+              "look": {"race": "human", "chest_style": "plate", "shirt": [0.7, 0.7, 0.74], "helmet": "horned", "helmet_color": [0.7, 0.7, 0.74],
+                       "weapon": "sword", "cape": "team"}}
+  },
+  "loremaster": {
+    "name": "Loremaster", "faction": "alliance", "role": "caster", "hotkey": "a",
+    "description": "Scholar-mage. Heals wounded allies and slows enemies.",
+    "cost": {"gold": 100, "timber": 50}, "supply": 2, "build_time": 26, "trained_at": "sanctum",
+    "hp": 70, "armor": 0, "armor_type": "light", "speed": 5.0, "sight": 20, "radius": 0.45, "mana": 150, "mana_regen": 1.6,
+    "abilities": ["heal", "slow"],
+    "attack": {"damage": 8, "type": "magic", "range": 9, "cooldown": 1.8, "targets": ["ground", "air"], "projectile": "frost"},
+    "model": {"kind": "humanoid", "scale": 0.86, "look": {"race": "human", "chest_style": "robe", "shirt": [0.85, 0.85, 0.88],
+              "pants": [0.6, 0.6, 0.65], "boots": null, "beard": true, "beard_color": [0.85, 0.85, 0.85], "helmet": "hood",
+              "helmet_color": "team", "weapon": "staff", "weapon_color": [0.6, 0.85, 1.0]}}
+  },
+  "trebuchet": {
+    "name": "Trebuchet", "faction": "alliance", "role": "siege", "hotkey": "s",
+    "description": "Long-range siege engine. Deadly against buildings, cannot fire at close range. Requires a Castle.",
+    "cost": {"gold": 150, "timber": 100}, "supply": 3, "build_time": 36, "trained_at": "siegeworks",
+    "hp": 180, "armor": 1, "armor_type": "heavy", "speed": 3.2, "sight": 18, "radius": 1.2, "turn_rate": 120,
+    "attack": {"damage": 60, "type": "siege", "range": 22, "min_range": 6, "cooldown": 4.5, "splash": 2.5,
+               "targets": ["ground"], "projectile": "boulder"},
+    "model": {"kind": "siege", "style": "trebuchet"}
+  },
+  "skyhawk_rider": {
+    "name": "Skyhawk Rider", "faction": "alliance", "role": "air", "hotkey": "d", "flying": true,
+    "description": "Rider on a giant hawk. Attacks ground and air. Requires a Castle.",
+    "cost": {"gold": 160, "timber": 60}, "supply": 3, "build_time": 30, "trained_at": "aerie",
+    "hp": 175, "armor": 1, "armor_type": "light", "speed": 8.0, "sight": 22, "radius": 1.0,
+    "attack": {"damage": 15, "type": "normal", "range": 4, "cooldown": 1.6, "targets": ["ground", "air"], "projectile": "spear"},
+    "model": {"kind": "flyer", "style": "hawk", "color": [0.62, 0.48, 0.3], "accent": "team"}
+  },
+
+  "thrall": {
+    "name": "Thrall", "faction": "host", "role": "worker", "hotkey": "q",
+    "description": "Bound labourer. Gathers resources and summons buildings, which then raise themselves.",
+    "cost": {"gold": 45, "timber": 0}, "supply": 1, "build_time": 11, "trained_at": "pit",
+    "hp": 50, "armor": 0, "armor_type": "light", "speed": 5.4, "sight": 14, "radius": 0.45,
+    "attack": {"damage": 4, "type": "normal", "range": 0, "cooldown": 1.5, "targets": ["ground"]},
+    "model": {"kind": "humanoid", "scale": 0.8, "look": {"race": "goblin", "chest_style": "bare", "pants": [0.3, 0.25, 0.2],
+              "boots": null, "helmet": "bandana", "helmet_color": "team", "weapon": "pickaxe", "scale": 1.3}}
+  },
+  "brute": {
+    "name": "Brute", "faction": "host", "role": "melee", "hotkey": "w",
+    "description": "Hulking infantry with a cleaver. Cheap and tough.",
+    "cost": {"gold": 55, "timber": 0}, "supply": 1, "build_time": 14, "trained_at": "war_camp",
+    "hp": 140, "armor": 1, "armor_type": "heavy", "speed": 5.0, "sight": 16, "radius": 0.55,
+    "attack": {"damage": 11, "type": "normal", "range": 0.4, "cooldown": 1.5, "targets": ["ground"]},
+    "model": {"kind": "humanoid", "scale": 0.92, "look": {"race": "orc", "skin": [0.38, 0.42, 0.3], "chest_style": "plate",
+              "shirt": [0.22, 0.2, 0.2], "pants": [0.2, 0.17, 0.15], "boots": [0.15, 0.1, 0.08], "helmet": "spiked",
+              "helmet_color": [0.25, 0.23, 0.24], "weapon": "axe", "shoulders": "team"}}
+  },
+  "shade_archer": {
+    "name": "Shade Archer", "faction": "host", "role": "ranged", "hotkey": "e",
+    "description": "Hooded archer of the Host. Can shoot flying units.",
+    "cost": {"gold": 45, "timber": 15}, "supply": 1, "build_time": 14, "trained_at": "war_camp",
+    "hp": 70, "armor": 0, "armor_type": "light", "speed": 5.2, "sight": 20, "radius": 0.45,
+    "attack": {"damage": 8, "type": "pierce", "range": 11, "cooldown": 1.4, "targets": ["ground", "air"], "projectile": "dark_arrow"},
+    "model": {"kind": "humanoid", "scale": 0.86, "look": {"race": "orc", "skin": [0.4, 0.45, 0.35], "chest_style": "tunic",
+              "shirt": [0.16, 0.15, 0.17], "pants": [0.15, 0.14, 0.15], "boots": [0.12, 0.1, 0.1], "helmet": "hood",
+              "helmet_color": "team", "weapon": "bow", "weapon_color": [0.25, 0.18, 0.15]}}
+  },
+  "dreadhound_rider": {
+    "name": "Dreadhound Rider", "faction": "host", "role": "cavalry", "hotkey": "r",
+    "description": "Fast raider mounted on a giant hound. Requires Kennels.",
+    "cost": {"gold": 110, "timber": 20}, "supply": 2, "build_time": 22, "trained_at": "kennels",
+    "hp": 170, "armor": 1, "armor_type": "light", "speed": 8.0, "sight": 18, "radius": 0.8,
+    "attack": {"damage": 13, "type": "normal", "range": 0.6, "cooldown": 1.2, "targets": ["ground"]},
+    "model": {"kind": "rider", "mount": "hound", "scale": 0.95, "mount_color": [0.28, 0.25, 0.22], "barding": "team",
+              "look": {"race": "goblin", "chest_style": "vest", "shirt": [0.25, 0.2, 0.18], "helmet": "spiked",
+                       "helmet_color": [0.25, 0.23, 0.24], "weapon": "spear", "scale": 1.25}}
+  },
+  "stone_ogre": {
+    "name": "Stone Ogre", "faction": "host", "role": "siege", "hotkey": "t",
+    "description": "Giant that smashes walls and soldiers alike. Requires a Stronghold.",
+    "cost": {"gold": 175, "timber": 50}, "supply": 4, "build_time": 34, "trained_at": "ogre_den",
+    "hp": 420, "armor": 2, "armor_type": "heavy", "speed": 4.6, "sight": 16, "radius": 1.2,
+    "attack": {"damage": 30, "type": "siege", "range": 0.8, "cooldown": 2.2, "targets": ["ground"]},
+    "model": {"kind": "ogre", "skin": [0.5, 0.47, 0.42], "accent": "team"}
+  },
+  "pyre_witch": {
+    "name": "Pyre Witch", "faction": "host", "role": "caster", "hotkey": "a",
+    "description": "Fire-caster. Hurls fireballs and drives allies into a frenzy.",
+    "cost": {"gold": 90, "timber": 50}, "supply": 2, "build_time": 25, "trained_at": "ritual_pyre",
+    "hp": 75, "armor": 0, "armor_type": "light", "speed": 5.2, "sight": 20, "radius": 0.45, "mana": 150, "mana_regen": 1.2,
+    "abilities": ["fireball", "dark_frenzy"],
+    "attack": {"damage": 7, "type": "magic", "range": 9, "cooldown": 1.7, "targets": ["ground", "air"], "projectile": "ember"},
+    "model": {"kind": "humanoid", "scale": 0.86, "look": {"race": "orc", "skin": [0.45, 0.4, 0.35], "chest_style": "robe",
+              "shirt": [0.35, 0.08, 0.06], "pants": [0.2, 0.05, 0.05], "boots": null, "hair_style": "long", "hair": [0.08, 0.08, 0.08],
+              "headdress": "team", "weapon": "staff", "weapon_color": [1.0, 0.45, 0.1]}}
+  },
+  "war_catapult": {
+    "name": "War Catapult", "faction": "host", "role": "siege", "hotkey": "s",
+    "description": "Hurls flaming rocks at long range. Cannot fire at close range. Requires a Stronghold.",
+    "cost": {"gold": 130, "timber": 90}, "supply": 3, "build_time": 32, "trained_at": "siege_pit",
+    "hp": 150, "armor": 1, "armor_type": "heavy", "speed": 3.6, "sight": 18, "radius": 1.1, "turn_rate": 120,
+    "attack": {"damage": 50, "type": "siege", "range": 20, "min_range": 6, "cooldown": 4.0, "splash": 2.5,
+               "targets": ["ground"], "projectile": "fire_rock"},
+    "model": {"kind": "siege", "style": "catapult"}
+  },
+  "carrion_drake": {
+    "name": "Carrion Drake", "faction": "host", "role": "air", "hotkey": "d", "flying": true,
+    "description": "Winged drake that strikes from the sky. Attacks ground and air. Requires a Stronghold.",
+    "cost": {"gold": 170, "timber": 70}, "supply": 3, "build_time": 32, "trained_at": "drake_roost",
+    "hp": 190, "armor": 1, "armor_type": "light", "speed": 7.6, "sight": 22, "radius": 1.2,
+    "attack": {"damage": 16, "type": "normal", "range": 3.5, "cooldown": 1.6, "targets": ["ground", "air"], "projectile": "ember"},
+    "model": {"kind": "flyer", "style": "drake", "color": [0.25, 0.22, 0.22], "accent": "team"}
+  }
+}
